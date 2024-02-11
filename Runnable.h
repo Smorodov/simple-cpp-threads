@@ -1,25 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   SimpleThread.h
- * Author: andreas
- *
- * Created on December 6, 2017, 7:25 AM
- */
-
-#ifndef SIMPLETHREAD_H
-#define SIMPLETHREAD_H
+#ifndef RUNNABLE_H
+#define RUNNABLE_H
 #include <thread>
 #include <mutex>
 #include <condition_variable>
-//simple automatic unlocking mutex
+//automatic unlocking mutex
 typedef std::unique_lock<std::mutex> Synchronized;
 
-//simple condition variable that encapsulates the monitor
+// condition variable that encapsulates the monitor
 //you need to ensure that the monitor life cycle fits
 //to the condition life cycle
 class Condition{
